@@ -5,5 +5,9 @@ class Ticket:
         self.user = user
         self.amount = amount
 
-    def create_from_tuple(self, t):
+    @staticmethod
+    def create_from_tuple(t):
         return Ticket(t[0], t[1], t[2], t[3])
+
+    def to_string(self, event):
+        return event.date + " " + event.time + " " + event.event + " " + str(self.amount)

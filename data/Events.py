@@ -7,5 +7,6 @@ class Event:
         self.location = location
         self.places = places
 
-    def create_from_tuple(self, t):
+    @staticmethod
+    def create_from_tuple(t):
         return Event(t[0], t[1], t[2], t[3], t[4], t[5])
