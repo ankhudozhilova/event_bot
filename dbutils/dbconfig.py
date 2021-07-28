@@ -1,5 +1,5 @@
-EVENT_DB_FILEPATH = "../dbase/events.db"
-
+#EVENT_DB_FILEPATH = "../dbase/events.db"
+EVENT_DB_FILEPATH = "C:/Users/anna2/PycharmProjects/event_bot/event_bot/dbase/events.db"
 NO_TICKETS = "no tickets"
 
 SQL_FOREIGN_KEY = """

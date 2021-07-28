@@ -46,7 +46,7 @@ def create_ticket(event_id, user, amount):
     conn.commit()
 
     t = Ticket(-1, event.id, user, amount)
-    return t.to_string(event)
+    return (event.id, amount, t.to_string(event))
 
 
 def add_places(event_id, places):
@@ -92,7 +92,3 @@ def clear_tickets():
 
     cursor.execute(cfg.SQL_CLEAR_TICKETS)
     conn.commit()
-
-events = get_events_by_user(111111)
-for e in events:
-    print(e)
